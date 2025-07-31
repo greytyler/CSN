@@ -6,7 +6,7 @@ This project demonstrates how to set up VPC peering between two Amazon VPCs, eac
 
 ## 🗺️ Architecture Diagram
 
-![VPC Peering Architecture](./vpc-peering-diagram.png) <!-- Replace with actual image file path -->
+<img src="./architecture" width="800" alt="Architecure"/>
 
 ---
 
@@ -15,7 +15,6 @@ This project demonstrates how to set up VPC peering between two Amazon VPCs, eac
 - Create two VPCs (A & B) with both public and private subnets.
 - Establish VPC Peering between the two VPCs.
 - Update route tables to allow communication across VPCs.
-- Use only **free-tier eligible** AWS resources.
 
 ---
 
@@ -53,6 +52,7 @@ This project demonstrates how to set up VPC peering between two Amazon VPCs, eac
 Create VPC A and VPC B from the VPC Dashboard:
 - Name each VPC
 - Assign CIDR blocks as shown above
+<img src="./VPCs-CIDRs.png" width="800" />
 
 ---
 
@@ -63,7 +63,10 @@ For each VPC:
   - 1 Public
   - 1 Private
 - Choose appropriate AZs (can be reused between VPCs)
-
+<p float="left">
+  <img src="./VPC-A-Subnets.png" width="47%" />
+  <img src="./VPC-B-Subnets.png" width="47%" />
+</p>
 ---
 
 ### 3️⃣ Create Internet Gateway (optional)
@@ -86,6 +89,8 @@ To allow internet access from public subnets:
 4. Accept the peering request
 5. Wait until status is `Active`
 
+<img src="./VPC-Connection.png">
+
 ---
 
 ### 5️⃣ Update Route Tables
@@ -99,6 +104,8 @@ Update route tables for all subnets in **both VPCs**:
 - **Destination**: `10.10.0.0/16` → Target: Peering Connection ID
 
 ✅ Add these entries to both **public** and **private** subnets in each VPC.
+
+<img src="./VPC-routes-tables.png" width="800"/>
 
 ---
 
