@@ -1,4 +1,8 @@
-## 🚀 Deploying Grafana on ECS with Fargate
+> ## 🚀 Deploying Grafana on ECS with Fargate
+
+#### Architecture
+
+<img src="./Architecture.png" width="600"/>
 
 --- 
 
@@ -91,6 +95,9 @@ Password: admin
   <img src="./grafana-login.png" width="47%" />
   <img src="./grafana-dashboard.png" width="47%" />
 </p>
+
+##### ✅ Conclusion
+Grafana is now successfully deployed on AWS Fargate via ECS, accessible on port 3000 with no servers to manage. Simple, scalable, and ready for monitoring.
 
 ---
 

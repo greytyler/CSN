@@ -1,5 +1,7 @@
 ##  Deploy Metabase on Amazon ECS Fargate with PostgreSQL RDS
 
+
+
 #### Overview
 
 This project involves deploying Metabase, an open-source business intelligence tool, on Amazon ECS using Fargate, and connecting it to a PostgreSQL database hosted on Amazon RDS. The goal is to set up a containerized application within a secure VPC environment and enable database connectivity, all while staying within AWS Free Tier limits.
