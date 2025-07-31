@@ -4,9 +4,9 @@ This project demonstrates how to set up VPC peering between two Amazon VPCs, eac
 
 ---
 
-## 🗺️ Architecture Diagram
+## 🗺️ Architecture
 
-<img src="./architecture" width="800" alt="Architecure"/>
+<img src="./architecture.png" width="800" alt="Architecure"/>
 
 ---
 
