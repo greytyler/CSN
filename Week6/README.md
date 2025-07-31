@@ -122,16 +122,6 @@ MB_DB_HOST=<your-rds-endpoint>
 
 ---
 
-## Screenshots Collected
-
-* RDS instance details (engine, endpoint, status)
-* RDS security group showing port 5432 rule
-* ECS task definition configuration
-* ECS cluster and running task screen
-* Metabase setup page confirming DB connection
-
----
-
 ## Cleanup Process
 
 ### ECS Cleanup
