@@ -49,7 +49,7 @@ This project involves deploying Metabase, an open-source business intelligence t
 * **Database Name:** metabase
 * **Master Username/Password:** Created and saved securely
 
-<img src="./rds-postgres-instance.png" width="600" />
+<img src="./rds-postgres-instance.png" width="800" />
 
 #### Step 2: VPC & Security Configuration
 
@@ -79,7 +79,7 @@ This project involves deploying Metabase, an open-source business intelligence t
 * **Image:** `metabase/metabase`
 * **Port Mapping:** 3000
 
-<img src="./ecs-task-definition.png" width="600" />
+<img src="./ecs-task-definition.png" width="800" />
 
 #### Environment Variables:
 
@@ -96,7 +96,7 @@ MB_DB_HOST=<your-rds-endpoint>
 
 * Created ECS task security group `ecs-sg`
 * Updated `rds-sg` to allow inbound traffic on port 5432 from `ecs-sg`
-<img src="./sg-rules.png" width="600" />
+<img src="./sg-rules.png" width="800" />
 
 #### Step 4: Run ECS Task (via service)
 * Go to ECS > Clusters, select your cluster, then “Create” under Services.
@@ -106,7 +106,7 @@ MB_DB_HOST=<your-rds-endpoint>
 * Launched the Metabase task in the same VPC and subnet as RDS.
 * Task used the created `ecs-sg` security group.
 * Confirmed Metabase was accessible on port 3000 via public IP.
-<img src="./ecs-running-service.png" width="600" />
+<img src="./ecs-running-service.png" width="800" />
 
 ---
 
@@ -118,7 +118,7 @@ MB_DB_HOST=<your-rds-endpoint>
   * Set up organization
   * Entered PostgreSQL connection details
   * Successfully connected to the RDS database
-<img src="./metabase-connection.png" width="600" />
+<img src="./metabase-connection.png" width="800" />
 
 ---
 
