@@ -1,0 +1,105 @@
+## 🚀 Deploying Grafana on ECS with Fargate
+
+--- 
+
+#### 📌 Objective
+Deploy Grafana using Amazon ECS with Fargate. Grafana will run in a public subnet and be accessible via port 3000 using a Docker image from grafana/grafana.
+
+#### 🛠️ Prerequisites
+Before you begin:
+
+AWS account with administrative access
+
+VPC with public subnets
+
+An IAM role with ECS permissions
+
+AWS CLI and ECS CLI configured
+
+Familiarity with ECS Fargate and Docker
+
+
+#### 🔧 Procedure 
+
+##### 1. Create ECS Cluster
+Go to the ECS console:
+ - Choose Clusters > Create Cluster
+ - Select Networking only (Fargate)
+ - Cluster name: `grafana-cluster`
+ - Click Create
+
+##### 2. Define Task Definition
+Go to Task Definitions > Create new Task Definition:
+- Launch type: `Fargate`
+- Task Definition Name: `grafana-task`
+- Task Role: Leave default unless using IAM features
+- Network Mode: `awsvpc`
+**Container Definitions:**
+- Click Add container
+- Container name: `grafana`
+- Image: `grafana/grafana:latest`
+**Port mappings:**
+- Container port: `3000`
+- Protocol: `tcp`
+- Memory Limits: `512 MiB`
+- CPU Units: `256`
+- Click Add then Create Task Definition
+<img src="./task-def-grafanaimage.png" width="800" />
+
+##### 3. Create Security Group
+Go to EC2 > Security Groups:
+-Name: `grafana-sg`
+
+**Inbound rule:**
+- Type: `Custom TCP`
+- Port range: `3000`
+- Source: `0.0.0.0/0`
+<img src="./port3000-sg.png" width="800" />
+
+This allows public access on port 3000.
+
+##### 4. Run ECS Service
+Back in ECS Console:
+- Go to Clusters > grafana-cluster
+- Click Create in the Services tab
+**Service Configuration:**
+- Launch type: `Fargate`
+- Task definition: `grafana-task`
+- Service name: `grafana-service`
+- Number of tasks: `1`
+**Networking:**
+VPC: Select existing
+Subnets: Select public subnet(s)
+Security groups: Select `grafana-sg`
+Enable auto-assign public IP
+Click `Create Service`
+<img src="./cluster-running-service.png" width="800" />
+
+##### 5. Get Public IP
+After the service is running:
+- Go to Tasks tab
+- Click the running task
+- Under ENI (Elastic Network Interface) section, note the Public IP address
+
+##### 6. Access Grafana UI
+Open your browser and navigate to: **http://<.PUBLIC-IP>:3000**
+Use default credentials:
+Username: admin
+Password: admin
+
+<p float="left">
+  <img src="./grafana-login.png" width="47%" />
+  <img src="./grafana-dashboard.png" width="47%" />
+</p>
+
+
+
+📸 Deliverables – What to Submit
+ECS Cluster screenshot showing the running task/service
+
+Task Definition screen showing container config
+
+Security Group Inbound Rule with port 3000
+
+Screenshot of the Grafana login screen in the browser
+
