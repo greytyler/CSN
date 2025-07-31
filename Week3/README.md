@@ -42,6 +42,7 @@ Create a new security group with the following inbound rule:
 
 This restricts RDP access to your current IP address, ensuring secure remote login.
 
+<img src="./W3-Solution-a.png" width="800">
 ---
 
 ### 🔓 4. Get Windows Administrator Password
@@ -68,16 +69,8 @@ This restricts RDP access to your current IP address, ensuring secure remote log
 - Install **Microsoft Remote Desktop**
 - Add new PC → Use public IP and credentials
 
----
-
-## 📸 Screenshots to Capture
-
-| Screenshot | Description |
-|------------|-------------|
-| ✅ EC2 Dashboard | Showing instance named `CSN-Bootcamp-Week3` in **Running** state |
-| ✅ Security Group Rules | Inbound RDP (port 3389) open only to **your IP** |
-| ✅ Decrypted Password Screen | Showing `Administrator` and the password |
-| ✅ RDP Connection | Desktop of the Windows Server instance |
+###### Connection to windows:
+<img src="./W3-Solution-b.png" width="800">
 
 
 ---
