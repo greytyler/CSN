@@ -118,15 +118,6 @@ To test cross-VPC connectivity:
 
 ---
 
-## ✅ Free Tier Eligibility
-
-This setup remains within the **AWS Free Tier**, provided:
-- EC2 instances are `t2.micro` or `t3.micro`
-- You don’t exceed the monthly limits
-- You avoid NAT Gateways and paid AMIs
-
----
-
 ## 🧹 Clean-Up Instructions
 
 To avoid charges:
