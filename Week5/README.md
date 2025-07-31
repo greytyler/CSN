@@ -92,14 +92,11 @@ Password: admin
   <img src="./grafana-dashboard.png" width="47%" />
 </p>
 
+---
 
-
-📸 Deliverables – What to Submit
-ECS Cluster screenshot showing the running task/service
-
-Task Definition screen showing container config
-
-Security Group Inbound Rule with port 3000
-
-Screenshot of the Grafana login screen in the browser
-
+###### 🧹 Cleanup
+- ✅ 1. Stop the Running Task
+- ✅ 2. Delete the ECS Cluster
+- ✅ 3. Deregister the Task Definition
+- ✅ 4. Delete the Security Group (Optional)
+- ✅ 5. Clean Up IAM Role: `ecsTaskExecutionRole`
