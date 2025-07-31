@@ -4,8 +4,8 @@ This project demonstrates how to launch a **Microsoft Windows Server 2019** inst
 
 ---
 
-## 🌐 Architecture Diagram
-
+#### 🌐 Architecture 
+<img src="./architecture.png" width="800" alt="architecture" />
 
 
 ---
@@ -79,10 +79,27 @@ This restricts RDP access to your current IP address, ensuring secure remote log
 | ✅ Decrypted Password Screen | Showing `Administrator` and the password |
 | ✅ RDP Connection | Desktop of the Windows Server instance |
 
+
+---
+
+#### ✅ Conclusion
+
+This task showed how to provision and remotely access a Windows server in the cloud using AWS EC2. You configured proper security via security groups, and used key-based authentication.
+
+By completing this, you've gained real-world experience with:
+- Windows Server provisioning
+- Remote access setup
+- Key management and password decryption
+
+---
+
+🔐 **Cloud Skills Unlocked** | 🧠 **RDP Security Understood** | 🌍 **First Step Toward Real Infrastructure Deployment**
+
+
 ---
 
 #### 🧹 Cleanup:
 
-When you're done, **stop or terminate** the instance:
+- ###### Stop (to reuse later): EC2 Console → Select instance → Instance State → Stop
+- ###### Terminate (delete forever): EC2 Console → Select instance → Instance State → Terminate
 
-### Stop (to reuse later):
