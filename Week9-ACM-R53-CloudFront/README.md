@@ -29,8 +29,8 @@
 * ###### Route 53 hosted zone or desec.io DNS dashboard showing records.
 <p float="left">
   <img src="./screenshots/R53-hosted-zone.png
-  " width="45%" />
-  <img src="./screenshots/desec-dname.png" width="45%" />
+  " width="44%" />
+  <img src="./screenshots/desec-dname.png" width="44%" />
 </p>
 
 ### 3. SSL Certificate Request (ACM)
