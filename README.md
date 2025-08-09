@@ -1,2 +1,2 @@
 # CSN
-Cloud Sescurity Network 12-week tasks
+Cloud Security Network 12-week tasks
