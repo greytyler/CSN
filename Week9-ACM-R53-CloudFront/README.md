@@ -6,7 +6,7 @@
 
 
 ###### Architectural flow
-<img src ="./screenshots/architecture.gif" width="600"/>
+<img src ="./screenshots/architecture.gif" width="800"/>
 
 ----
 
@@ -39,7 +39,7 @@
 * Added the ACM-provided CNAME validation records in DNS (desec.io or Route 53).
 * Certificate status shown as **Pending Validation** or validated if possible.
 * ###### ACM console showing the certificate request and validation status.
- <img src="./screenshots/acm-cert-request.png" width="750" />
+ <img src="./screenshots/acm-cert-request.png" width="800" />
 
 ### 4. CloudFront Distribution and Static Site Hosting
 
@@ -50,12 +50,12 @@
   * The validated ACM SSL certificate attached.
   * The S3 bucket as origin.
 * ###### CloudFront distribution settings showing custom domain and SSL cert.
- <img src="./screenshots/cf-dist-settings.png" width="750" />
+ <img src="./screenshots/cf-dist-settings.png" width="800" />
 
 ### 5. HTTPS Website Access (Simulated or Real)
 
 * ###### Website browsing `https://cloudsec9.dedyn.io` 
-<img src="./screenshots/website-access.png" width="750"/>
+<img src="./screenshots/website-access.png" width="800"/>
 
 
 ###### Expected Secure Connection Behavior After Validation:
