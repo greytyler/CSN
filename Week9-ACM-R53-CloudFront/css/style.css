@@ -1,0 +1,44 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+header {
+    background-color: #001f3f;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+header p {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+}
+main {
+    padding: 2rem;
+}
+h2 {
+    color: #001f3f;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+ul li {
+    background-color: #e9ecef;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
