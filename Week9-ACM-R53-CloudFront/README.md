@@ -1,12 +1,12 @@
 
 ---
 
-## CSN9 🌐Domain and SSL Setup Using AWS with desec.io Domain & Static Site
+> ## CSN9 🌐Domain and SSL Setup Using AWS with desec.io Domain & Static Site Write-up
 ---
 
 
 ###### Architectural flow
-<img src ="./screenshots/archutecture.png" width="600"/>
+<img src ="./screenshots/architecture.gif" width="600"/>
 
 ----
 
@@ -26,14 +26,20 @@
 
   * Created a Route 53 hosted zone for `mydemo.tk`.
   * Added mock NS and A records to simulate delegation and hosting.
-* **Screenshot**: Route 53 hosted zone or desec.io DNS dashboard showing records.
+* ###### Route 53 hosted zone or desec.io DNS dashboard showing records.
+<p float="left">
+  <img src="./screenshots/R53-hosted-zone.png
+  " width="45%" />
+  <img src="./screenshots/desec-dname.png" width="45%" />
+</p>
 
 ### 3. SSL Certificate Request (ACM)
 
 * Requested a public certificate for the domain via AWS Certificate Manager using DNS validation.
 * Added the ACM-provided CNAME validation records in DNS (desec.io or Route 53).
 * Certificate status shown as **Pending Validation** or validated if possible.
-* **Screenshot**: ACM console showing the certificate request and validation status.
+* ###### ACM console showing the certificate request and validation status.
+ <img src="./screenshots/acm-cert-request.png" width="750" />
 
 ### 4. CloudFront Distribution and Static Site Hosting
 
@@ -43,13 +49,18 @@
   * The domain as Alternate Domain Name (CNAME).
   * The validated ACM SSL certificate attached.
   * The S3 bucket as origin.
-* **Screenshot**: CloudFront distribution settings showing custom domain and SSL cert.
+* ###### CloudFront distribution settings showing custom domain and SSL cert.
+ <img src="./screenshots/cf-dist-settings.png" width="750" />
 
 ### 5. HTTPS Website Access (Simulated or Real)
 
-* Simulated browsing `https://mydemo.tk` or actual browsing of your desec.io domain.
-* Included a mock browser screenshot or diagram showing the HTTPS padlock.
-* Explained the expected secure connection behavior after validation.
+* ###### Website browsing `https://cloudsec9.dedyn.io` 
+<img src="./screenshots/website-access.png" width="750"/>
+
+
+###### Expected Secure Connection Behavior After Validation:
+Once the SSL certificate is successfully validated and attached to the CloudFront distribution, visitors accessing the website via the custom domain will see the site load over HTTPS with a secure padlock icon in their browser. This ensures encrypted communication, verifies the site’s authenticity, and builds user trust.
+
 
 ---
 
