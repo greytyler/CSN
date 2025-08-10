@@ -19,18 +19,18 @@ When a file is uploaded to an Amazon S3 bucket, that S3 event triggers an AWS La
 
 ---
 
-### Step-by-step (console + exact CLI commands)
+### Step-by-step Implementation
 
-#### 1. 🗑 Create an S3 bucket
+### 1. 🗑 Create an S3 bucket
 
 **Console**
 
 1. AWS Console → Services → S3 → **Create bucket**.
-2. Bucket name: `my-week10-bucket-<your-unique-suffix>` (MUST be globally unique).
+2. Bucket name: `csn-lambda-bucket` (MUST be globally unique).
 
 ---
 
-#### 2.  ⚙️ Create IAM role for Lambda (with CloudWatch, and optional S3/SES permissions)
+### 2.  ⚙️ Create IAM role for Lambda (with CloudWatch, and optional S3/SES permissions)
 
 We will create a role that trusts Lambda and attach the AWS-managed `AWSLambdaBasicExecutionRole` for CloudWatch logging. If Lambda must read objects (`head_object`) or call SES, attach a custom policy with explicit resources.
 
@@ -55,7 +55,7 @@ We will create a role that trusts Lambda and attach the AWS-managed `AWSLambdaBa
 2. Trusted entity: **AWS service** → **Lambda** → Next.
 3. Attach `AWSLambdaBasicExecutionRole`.
 4. (Optional) Create and attach a custom policy for S3 read and/or SES send actions (see policy JSONs below).
-5. Name the role: `lambda-s3-exec-role-week10`.
+5. Name the role: `lambda-s3-exec-role`.
 
 
 
@@ -73,8 +73,8 @@ We will create a role that trusts Lambda and attach the AWS-managed `AWSLambdaBa
       "Effect": "Allow",
       "Action": ["s3:GetObject","s3:ListBucket","s3:GetObjectAcl"],
       "Resource": [
-        "arn:aws:s3:::my-week10-bucket-12345",
-        "arn:aws:s3:::my-week10-bucket-12345/*"
+        "arn:aws:s3:::csn-lambda-bucket",
+        "arn:aws:s3:::csn-lambda-bucket/*"
       ]
     }
   ]
@@ -187,7 +187,7 @@ def lambda_handler(event, context):
 
 1. Open your Lambda function → **Add trigger**.
 2. Choose **S3**.
-3. Bucket: `my-week10-bucket-...`
+3. Bucket: `csn-lambda-bucket`
 4. Event type: `All object create events` (or `PUT` only).
 5. Prefix / Suffix (optional).
 6. Add. Lambda console will auto-add permission so S3 can invoke Lambda.
