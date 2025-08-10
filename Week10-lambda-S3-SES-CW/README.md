@@ -56,11 +56,11 @@ We will create a role that trusts Lambda and attach the AWS-managed `AWSLambdaBa
 5. Name the role: `lambda-s3-exec-role-week10`.
 
 
-  ```
 
-### Add additional IAM policy JSONs to role (Optional)
+#### Add additional IAM policy JSONs to role (Optional)
 
 **S3 read (if Lambda will call)**
+
 
 ```json
 {
@@ -78,6 +78,7 @@ We will create a role that trusts Lambda and attach the AWS-managed `AWSLambdaBa
   ]
 }
 ```
+
 
 **SES send (optional)**
 
@@ -117,7 +118,7 @@ Create a function with Python runtime.
    - `SES_SOURCE` = `verified-sender@example.com`
    - `SES_DEST` = `verified-recipient@example.com`
 8. Paste the Lambda code (see Section 3) into the inline editor and Deploy.
-   - This function logs the S3 event, optionally reads object metadata, and optionally sends an SES email when environment variable `SEND_EMAIL=true`.
+   - This function logs the S3 event, optionally reads object metadata, and optionally sends an SES email when environment variable `SEND_EMAIL=true`
 
 ```python
 import json
@@ -173,8 +174,6 @@ def lambda_handler(event, context):
 ```
 
 
-
-```
 <img src="./screenshots/lambda-code.png" width="900">
 
 
