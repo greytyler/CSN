@@ -45,7 +45,7 @@ This project demonstrates how to set up VPC peering between two Amazon VPCs, eac
 
 ---
 
-## 🪜 Step-by-Step Setup
+##  Step-by-Step Setup
 
 ### 1️⃣ Create VPCs
 
@@ -144,3 +144,39 @@ To avoid charges:
 This project covered building two isolated VPCs with structured public and private subnets and securely connecting them using **VPC Peering**. 
 
 ---
+
+###### 🤗 My blog’s got diagrams, dev rants, and dopamine
+
+<a href="https://greystack.hashnode.dev" target="_blank">
+  <svg width="220" height="30" viewBox="0 0 260 32" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <!-- Gradient for badge background -->
+      <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#08627eff" />
+        <stop offset="100%" stop-color="#3d056bff" />
+      </linearGradient>
+      <!-- Path for animated border -->
+      <path id="borderPath" d="M8,0 H252 A8,8 0 0 1 260,8 V24 A8,8 0 0 1 252,32 H8 A8,8 0 0 1 0,24 V8 A8,8 0 0 1 8,0 Z" />
+      <!-- Gradient for border stroke -->
+      <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#b8f0ffff" />
+        <stop offset="100%" stop-color="#6aff45ff" />
+      </linearGradient>
+    </defs>
+    <!-- Gradient background -->
+    <rect width="260" height="32" rx="8" fill="url(#badgeGrad)" />
+    <!-- Text label -->
+    <text x="130" y="21" text-anchor="middle" fill="#ffffff" font-family="Verdana" font-size="14">
+      ☁️ Greystack Cloud & Code ⚡
+    </text>
+    <!-- Animated border stroke -->
+    <path d="M8,0 H252 A8,8 0 0 1 260,8 V24 A8,8 0 0 1 252,32 H8 A8,8 0 0 1 0,24 V8 A8,8 0 0 1 8,0 Z"
+          fill="none" stroke="url(#glowGrad)" stroke-width="3"
+          stroke-dasharray="1000" stroke-dashoffset="0">
+      <animate attributeName="stroke-dashoffset" values="1000;0" dur="3s" repeatCount="indefinite" />
+    </path>
+  </svg>
+</a>
+
+
+###### 📲 Feel free to connect or drop feedback on [Aubrey T Dube LinkedIn](https://www.linkedin.com/in/aubrey-t-dube-194896288/) or [GitHub](https://github.com/greytyler)
