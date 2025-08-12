@@ -71,7 +71,7 @@ To stay within the Free Tier:
 
 
 --- 
-###### 🤗 Blog, experiments & builds
+###### 🤗 My blog’s got more diagrams than a conspiracy theorist’s basement
 
 <a href="https://greystack.hashnode.dev" target="_blank">
   <svg width="220" height="30" viewBox="0 0 260 32" xmlns="http://www.w3.org/2000/svg">
