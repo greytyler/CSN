@@ -1,2 +1,2 @@
 # CSN
-CloudSec Network 12-week tasks
+CloudSec Network 12-week tasks/projects
