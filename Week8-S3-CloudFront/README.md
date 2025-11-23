@@ -1,6 +1,6 @@
 # 🌐 Personal Portfolio Website — AWS S3 + CloudFront
 
-This project showcases a **simple, responsive, and minimalistic portfolio website** hosted on **Amazon S3** and delivered globally using **AWS CloudFront distribution **.
+This project showcases a **simple, responsive, and minimalistic portfolio website** hosted on **Amazon S3** and delivered globally using **AWS CloudFront distribution**.
 
 > ✅ Built within AWS Free Tier limits
 
