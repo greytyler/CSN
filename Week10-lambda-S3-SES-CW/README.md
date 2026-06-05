@@ -75,6 +75,8 @@ We will create a role that trusts Lambda and attach the AWS-managed `AWSLambdaBa
       "Resource": [
         "arn:aws:s3:::csn-lambda-bucket",
         "arn:aws:s3:::csn-lambda-bucket/*"
+         "arn:aws:s3:::csn-lambda-bucket/*"
+         "arn:aws:s3:::csn-lambda-bucket/*"
       ]
     }
   ]
